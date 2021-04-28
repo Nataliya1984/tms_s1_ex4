@@ -162,6 +162,7 @@ ul.menu__list li:last-child {
 
 .registration input {
     display: block;
+    outline: none;
 }
 
 .button-container {
@@ -183,7 +184,7 @@ span {
 }
 
 .registration__input {
-    width: 252px;
+    width: 100%;
     border: none;
     border-bottom: 1px solid #BDBDBD;
     height: 54px;
@@ -251,6 +252,10 @@ span {
     font-weight: 400;
     padding-bottom: 17px;
     color: #86878B;
+}
+
+.cocial-icons__list {
+    filter: opacity(50%);
 }
 
 ul.cocial-icons__list li {
@@ -355,7 +360,7 @@ ul.cocial-icons__list li {
     padding-bottom: 116px;
 }
 
-.wrapper__icons {
+.card__icons {
     border: 1px solid #E72424;
     width: 70px;
     height: 70px;
@@ -365,31 +370,31 @@ ul.cocial-icons__list li {
     margin: auto;
 }
 
-.wrapper__icons img {
+.card__icons img {
     position: absolute;
     top: 50%;
      left: 50%;
      transform: translateY(-50%) translateX(-50%);
 }
 
-.wrapper__title {
+.card__title {
     font-family: Open Sans;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
 }
 
-.wtapper__text {
+.card__text {
     text-align: center;
     padding-top: 30px;
     padding-bottom: 16px;
 }
 
-.wrapper__description {
+.card__description {
     text-align: center;
 }
 
-.wrapper_container {
+.card_container {
     width: 350px;
 }
 
@@ -403,10 +408,74 @@ ul.cocial-icons__list li {
     background-color: #F5F5F5; 
 }
 
+.box {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding-bottom: 60px;
+   
+}
+
+.row_top {
+    font-family: Open Sans;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+color: white;
+
+}
+
+.row_center {
+    font-family: Raleway;
+font-size: 35px;
+font-style: normal;
+font-weight: 700;
+color: white;
+
+}
+
+.row_botton {
+    font-family: Open Sans;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+color: #86878B;
+
+}
+
+.pricing-options_tab {
+    padding-top: 47px;
+}
+
+.pricing-options_tab:last-child {
+    padding-top: 62px;
+}
+
+.pricing-options_tab:first-child {
+    padding-top: 62px;
+}
+
+.pricing-options_row-top,
+.prising-options_row-botton {
+    height: 50px;
+    width: 340px;
+    background: #333333;
+    border: 1px solid white;
+    line-height: 50px;
+}
+
+.prising-options_row-center {
+    height: 100px;
+    width: 340px;
+    background: #333333;
+    border: 1px solid white;
+    line-height: 100px;
+}
+
 .pricing-options__list {
     display: flex;
     justify-content: space-between;
-    padding-top: 47px;
+   
     padding-bottom: 60px;
 }
 
@@ -416,62 +485,7 @@ ul.cocial-icons__list li {
     
 }
 
-ul.pricing-options__list li{
-   display: inline-block;
-}
-
-ul.pricing-options__left-list li,
-ul.pricing-options__center-list li,
-ul.pricing-options__right-list li {
-    margin-top: 2px;
-    text-align: center;
-    line-height: 50px;
-}
-
-.pricing-options__left-list,
-.pricing-options__right-list {
-    padding-top: 20px;
-}
-
-.pricing-options__list ul {
-    width: 340px;
-}
-
-.pricing-options__list li:nth-child(1) {
-    font-family: Open Sans;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    text-align: center;
-    color: #FFFFFF;
-    background: #333333;
-    height: 50px;
-}
-
-.pricing-options__list li:nth-child(2) {
-    font-family: Raleway;
-    font-size: 35px;
-    font-style: normal;
-    font-weight: 700;
-    text-align: center;
-    color: #FFFFFF;
-    background: #333333;
-    height: 100px;
-    line-height: 100px;
-}
-
-.pricing-options__list li:nth-child(3) {
-    font-family: Open Sans;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    text-align: center;
-    color: #86878B;
-    background: #333333;
-    height: 50px;
-}
-
-.pricing-options__list li:nth-child(n+4) {
+.pricing-options__left-list li {
     font-family: Open Sans;
     font-size: 14px;
     font-style: normal;
@@ -479,11 +493,17 @@ ul.pricing-options__right-list li {
     text-align: center;
     background: #FFFFFF;
     height: 50px;
+    margin-top: 2px;
 }
+
 
 .reviews {
     padding: 80px 110px 119px 110px;
     margin: 0 auto;
+}
+
+.pricing-options__center-list {
+    margin-top: -15px;
 }
 
 .reviews__title {
@@ -519,6 +539,7 @@ ul.pricing-options__right-list li {
 
 .title__subtitle--review {
     color: #86878B;
+    padding: 14px;
 }
 
 .wrapper__title--padding {
@@ -580,35 +601,37 @@ ul.pricing-options__right-list li {
      margin: 0 auto;
 }
 
-.cheet__registration {
+.recording__input {
      display: flex;
      justify-content: space-between;
      padding-top: 95px;
      padding-bottom: 68px;
 }
 
-.cheet__input input{
+.block__input input{
      display: block;
+     outline: none;
 }
 
-.cheet__inputName {
-     width: 478px;
+.input__registration {
+     width: 480px;
      border: none;
      border-bottom: #BDBDBD 1px solid;
      height: 32px;
      margin-top: 32px;
 }
 
-.cheet__inputName:first-child {
+.input__registration:first-child {
      margin-top: 0;
 }
 
-.cheet__textareaMessage {
+.textarea__Message {
      height: 100%;
-     width: 478px;
+     width: 480px;
      border: none;
      border-bottom: #BDBDBD 1px solid;
      resize: none;
+     outline: none
 }
 
 .contact__button {
@@ -636,4 +659,12 @@ footer {
     font-style: normal;
     font-weight: 400;
     color: #86878B;
+    padding-top: 18px;
 }
+
+
+
+
+
+
+
